@@ -1,6 +1,6 @@
 ![Screenshot_2025-04-14_201227-removebg-preview](https://github.com/user-attachments/assets/b057a1f4-3bed-4b0a-8994-51f2fb187b35)
 # Threat Hunt Report: Suspicious Firefox Behavior
-- [Scenario Creation](https://github.com/SPANKYWOWWOW/threat-hunting-scenario-tor/blob/main/threat-hunting-scenario-tor-event-creation.md)
+- [Scenario Creation](https://github.com/SPANKYWOWWOW/threat-hunting-scenario-firefox/blob/main/threat-hunting-scenario-firefox-event-creation.md)
 
 ## Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
