@@ -1,18 +1,36 @@
-# Threat Event (Unauthorized TOR Usage)
-**Unauthorized TOR Browser Installation and Use**
+# Threat Event (Suspicious Firefox Behavior)
+**Unusual Firefox Behavior Indicating Potential Web Shell Use**
 
 ## Steps the "Bad Actor" took Create Logs and IoCs:
-1. Download the TOR browser installer: https://www.torproject.org/download/
-2. Install it silently: ```tor-browser-windows-x86_64-portable-14.0.1.exe /S```
-3. Opens the TOR browser from the folder on the desktop
-4. Connect to TOR and browse a few sites. For example:
-   - **WARNING: The links to onion sites change a lot and these have changed. However if you connect to Tor and browse around normal sites a bit, the necessary logs should still be created:**
-   - Current Dread Forum: ```dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion```
-   - Dark Markets Forum: ```dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/DarkNetMarkets```
-   - Current Elysium Market: ```elysiumutkwscnmdohj23gkcyp3ebrf4iio3sngc5tvcgyfp4nqqmwad.top/login```
+1. Download and Install Firefox
+The attacker downloads Firefox from an official source, but the installation is carried out in a non-standard manner, possibly silently or via script.
+   - Download Firefox: `https://www.mozilla.org/firefox/download/`
+   - Silent install command: `firefox-installer.exe /s`
 
-6. Create a folder on your desktop called ```tor-shopping-list.txt``` and put a few fake (illicit) items in there
-7. Delete the file.
+2. Launch Firefox with Abnormal Command-Line Arguments
+The attacker starts Firefox using command-line arguments that indicate it may be running in an unusual or potentially malicious context.
+   - Command-line arguments:
+   `firefox.exe --new-instance --no-remote-profile "C:\Temp\FirefoxProfile"`
+
+3.  Navigate to Suspicious Web Shell Site
+The attacker accesses a site that may host or serve web shells.
+Example suspicious URL accessed by Firefox:
+   - `http://example.com/shell.php`
+  
+4. Interact with the Web Shell
+The attacker interacts with the web shell, potentially to upload, download, or execute malicious code. Firefox might also be used to access further malicious resources.
+   - Execute malicious JavaScript or shell commands on the target server.
+   - Potential exfiltration of data or system compromise.
+
+
+5. Download Malicious Files
+Using Firefox, the attacker downloads a potentially malicious file to the local system.
+   - Malicious file: `exploit.zip` or a payload such as `shell.exe`
+
+6. Clean Up Activity
+After completing the malicious activity, the attacker deletes certain files or logs to cover their tracks.
+   - Delete downloaded files and potentially the profile created for malicious browsing.
+
 
 ---
 
